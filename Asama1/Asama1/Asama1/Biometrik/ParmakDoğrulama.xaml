@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView" xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             x:Class="Asama1.Biometrik.ParmakDoğrulama">
+    <StackLayout BackgroundColor="White">
+        <Grid>
+            <ScrollView>
+                <StackLayout>
+
+                    <StackLayout>
+                        <yummy:PancakeView BackgroundGradientStartPoint="0,0" BackgroundGradientEndPoint="0,1" 
+                                           Padding="24" HeightRequest="80" CornerRadius="0" Opacity="1">
+                            <yummy:PancakeView.BackgroundGradientStops>
+                                <yummy:GradientStopCollection>
+                                    <yummy:GradientStop Color="#1e90ff" Offset="0.01" />
+                                    <yummy:GradientStop Color="#1c86ee" Offset="0.25" />
+                                    <yummy:GradientStop Color="#1874cd" Offset="0.5" />
+                                    <yummy:GradientStop Color="#104e8b" Offset="1" />
+                                </yummy:GradientStopCollection>
+                            </yummy:PancakeView.BackgroundGradientStops>
+                            <StackLayout>
+
+                                <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                                    <Label Text="MoonBow" FontFamily="Bilbo" FontSize="50"
+                                   TextColor="White" FontAttributes="Bold" VerticalTextAlignment="Center"
+                                   HorizontalTextAlignment="Center" ></Label>
+                                </StackLayout>
+                            </StackLayout>
+                        </yummy:PancakeView>
+                    </StackLayout>
+
+
+                    <StackLayout>
+                        <Frame  HeightRequest="100" HasShadow="False" >
+                            <Label Text="Geleceginize 'biometrik' bilgilerinizle ışık tutun" TextColor="#1c1c1c"
+                                   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" 
+                                   FontSize="25" FontFamily="Oswald" />
+                        </Frame>
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Frame HasShadow="False">
+                            <lottie:AnimationView x:Name="lottie" Animation="fingerDog.json" 
+                                                  AutoPlay="True"  WidthRequest="120" HeightRequest="120" 
+                                                  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" 
+                                                  />
+
+                        </Frame>
+                    </StackLayout>
+
+                    <StackLayout Spacing="70">
+                        
+                        <Frame BackgroundColor="White"  CornerRadius="10" HasShadow="False" >
+                            <StackLayout Spacing="50">
+                                <Button Text="Giriş Yap" FontFamily="Oswald" BackgroundColor="#1c86ee"
+                                                FontSize="17" FontAttributes="Bold" CornerRadius="10"
+                                                TextColor="White" HeightRequest="90" x:Name="giris" Clicked="giris_Clicked"></Button>
+                                
+                                <Label  Text="Collections Web Sayfası" FontFamily="Bilbo-Swash-Caps" FontSize="30" 
+                                   TextColor="#1874cd" FontAttributes="Bold" VerticalTextAlignment="Center" TranslationY="15"
+                                   HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                                
+                                
+                            </StackLayout>
+                           
+                        </Frame>
+                        <Frame HasShadow="False" BorderColor="#e8e8e8"  >
+                            <Grid HorizontalOptions="Center" >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label  FontFamily="Bilbo-Swash-Caps" Text="Geri dön! " HorizontalTextAlignment="Center"
+                                    VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="25"
+                                    TextColor="#1c1c1c"  Grid.Column="0" Grid.Row="0"></Label>
+
+                                <Label  FontFamily="Oswald" Text="Giriş" HorizontalTextAlignment="Center"
+                                    VerticalTextAlignment="Center"  FontSize="17"
+                                    TextColor="#1874cd"  Grid.Column="1" Grid.Row="0" >
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped">
+
+                                        </TapGestureRecognizer>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+
+                        </Frame>
+
+
+                    </StackLayout>
+                    
+                    
+                    
+                    
+                    
+                   
+
+
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Asama1.KayıtVgiris.Register">
+    <StackLayout BackgroundColor="#00bfff">
+        <Grid>
+            
+        
+        <ScrollView>
+                <StackLayout>
+                    
+                    <StackLayout>
+                <Frame  BackgroundColor="Black" HeightRequest="80" HasShadow="True"  >
+                        <Image Source="moon1.jpg" Aspect="AspectFill"></Image>
+                </Frame>
+            </StackLayout>
+
+                <StackLayout>
+                        <Frame BackgroundColor="#00bfff" HeightRequest="80" HasShadow="False" >
+                            <Label Text="Bilgilerini ve dosyalarını güvende tutmak için kaydol!" TextColor="#1c1c1c"
+                                   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontAttributes="Bold"
+                                   FontSize="30" FontFamily="Bilbo-Swash-Caps" />
+                        </Frame>
+                </StackLayout>
+                    
+                    <StackLayout>
+                        <Frame HasShadow="False" CornerRadius="50" BackgroundColor="#00bfff">
+                            <Button Text="Hızlı Giriş" CornerRadius="15" BorderWidth="4" BorderColor="#00bfff"
+                                    BackgroundColor="White" TextColor="#1c1c1c" FontFamily="Oswald" FontAttributes="Bold"
+                                    FontSize="17" x:Name="HızlıGiris" Clicked="HızlıGiris_Clicked"></Button>
+                        </Frame>
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Frame HeightRequest="250" BackgroundColor="#00bfff" HasShadow="False">
+
+                            <StackLayout >
+                                <Frame BackgroundColor="#009acd" HeightRequest="35" CornerRadius="15" HasShadow="True">
+                                    <Entry Placeholder="E-posta" PlaceholderColor="Black" VerticalTextAlignment="Center"
+                                           FontSize="13" FontAttributes="Bold" TextColor="White"
+                                           x:Name="posta"></Entry>
+                                </Frame>
+
+                                <Frame BackgroundColor="#00b2ee"  HeightRequest="35" CornerRadius="15" HasShadow="True">
+                                    <Entry Placeholder="Adı Soyadı" PlaceholderColor="Black" VerticalTextAlignment="Center"
+                                           FontSize="13" FontAttributes="Bold" TextColor="White"
+                                           x:Name="adSoyad"></Entry>
+                                </Frame>
+
+                                <Frame BackgroundColor="#00bfff"  HeightRequest="35" CornerRadius="15" HasShadow="True">
+                                    <Entry Placeholder="Şifre" PlaceholderColor="Black" VerticalTextAlignment="Center"
+                                           FontSize="13" FontAttributes="Bold" TextColor="White"
+                                           x:Name="sifre"></Entry>
+                                </Frame>
+                                
+                            </StackLayout>
+                            
+                        </Frame>
+                    </StackLayout>
+                    
+                    <StackLayout>
+                        <Frame  BackgroundColor="#00bfff" HasShadow="False">
+                            <Label  FontFamily="Bilbo-Swash-Caps" Text="MoonBow collection" HorizontalTextAlignment="Center"
+                                    VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="25"
+                                    TextColor="#1c1c1c"></Label>
+                        </Frame>
+                    </StackLayout>
+                    
+                    <StackLayout>
+                        <Frame HasShadow="False" CornerRadius="50" BackgroundColor="#00bfff" >
+                            <Button Text="Kaydol" CornerRadius="15" BorderWidth="4" BorderColor="#00bfff"
+                                    BackgroundColor="White" TextColor="#1c1c1c" FontFamily="Oswald" FontAttributes="Bold"
+                                    FontSize="17" x:Name="kaydol" Clicked="kaydol_Clicked"></Button>
+                        </Frame>
+                    </StackLayout>
+
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </StackLayout>
+</ContentPage>

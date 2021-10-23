@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Asama1.KayıtVgiris.KayıtSayfası">
+    <StackLayout BackgroundColor="AliceBlue">
+        <Grid>
+            <StackLayout Margin="0" Padding="0">
+                <Frame BackgroundColor="Azure" HeightRequest="150" HorizontalOptions="FillAndExpand" >
+                    
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Margin="15,110,15,0">
+                <Frame BackgroundColor="Bisque" HasShadow="True" HeightRequest="320" HorizontalOptions="FillAndExpand">
+                    <StackLayout >
+                        
+                        <StackLayout HorizontalOptions="CenterAndExpand">
+                            <Label Text="Kayıt" TextColor="Black" FontSize="Medium" FontAttributes="Bold"></Label>
+                        </StackLayout>
+
+                        <StackLayout Margin="0,25,0,0"> 
+                            <Frame CornerRadius="50" BackgroundColor="Transparent" Padding="0" Margin="0" BorderColor="DarkGray" HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal">
+                                    <Frame BackgroundColor="AliceBlue" CornerRadius="50"   Margin="5"></Frame>
+                                  
+                                    <Entry Placeholder="Email" HorizontalOptions="StartAndExpand"></Entry>
+                                    
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+                    </StackLayout>
+                  
+
+                  
+                </Frame>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+</ContentPage>

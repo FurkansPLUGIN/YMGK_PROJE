@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="Asama1.KayıtVgiris.Login">
+    <StackLayout BackgroundColor="White">
+        <Grid>
+            
+        
+        <ScrollView>
+            <StackLayout>
+
+
+                    <StackLayout>
+                        <yummy:PancakeView BackgroundGradientStartPoint="0,0" BackgroundGradientEndPoint="0,1" 
+                                           Padding="24" HeightRequest="80" CornerRadius="0" Opacity="1">
+                            <yummy:PancakeView.BackgroundGradientStops>
+                                <yummy:GradientStopCollection>
+                                    <yummy:GradientStop Color="#ff69b4" Offset="0.01" />
+                                    <yummy:GradientStop Color="#ff3e96" Offset="0.25" />
+                                    <yummy:GradientStop Color="#ee3a8c" Offset="0.5" />
+                                    <yummy:GradientStop Color="#836fff" Offset="1" />
+                                </yummy:GradientStopCollection>
+                            </yummy:PancakeView.BackgroundGradientStops>
+                            <StackLayout>
+
+                                <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                                    <Label Text="MoonBow" FontFamily="Bilbo" FontSize="50"
+                                   TextColor="White" FontAttributes="Bold" VerticalTextAlignment="Center"
+                                   HorizontalTextAlignment="Center" ></Label>
+                                </StackLayout>
+                            </StackLayout>
+                        </yummy:PancakeView>
+                    </StackLayout>
+                  
+                
+                    <StackLayout >
+                        <Frame HeightRequest="350"  HasShadow="False" >
+                            <StackLayout  Margin="10" Spacing="15">
+
+
+                                <StackLayout Spacing="15">
+                                <Frame CornerRadius="10" BorderColor="#e8e8e8" BackgroundColor="#fafafa"
+                                       HeightRequest="35">
+                                    <Entry Placeholder="Kullanıcı Adı" PlaceholderColor="#d4d4d6"
+                                            FontSize="13" FontAttributes="Italic,Bold" TextColor="#1c1c1c"
+                                           VerticalOptions="Center" VerticalTextAlignment="End" HorizontalTextAlignment="Start"
+                                           x:Name="kullanıcıGiris"></Entry>
+                                </Frame>
+
+                                <Frame CornerRadius="10" BorderColor="#e8e8e8" BackgroundColor="#fafafa"
+                                       HeightRequest="35">
+                                    <Entry Placeholder="Şifre" PlaceholderColor="#d4d4d6"
+                                            FontSize="13" FontAttributes="Italic,Bold" TextColor="#1c1c1c"
+                                            VerticalOptions="Center" VerticalTextAlignment="End" HorizontalTextAlignment="Start"
+                                           x:Name="sifreGiris"></Entry>
+                                </Frame>
+                            </StackLayout>
+
+                                <StackLayout>
+                                    <Frame BackgroundColor="#ff3e96"  CornerRadius="10" >
+                                        <Button Text="Giriş Yap" FontFamily="Oswald" BackgroundColor="#ff3e96"
+                                                FontSize="17" FontAttributes="Bold" CornerRadius="10"
+                                                TextColor="White" x:Name="giris" Clicked="giris_Clicked"></Button>
+                                    </Frame>
+                            </StackLayout>
+                                <StackLayout>
+                                    <Frame HasShadow="False">
+                                        <Label Text="___________________ VEYA ___________________" TextColor="#b7b7b7"
+                                               HorizontalTextAlignment="Center"></Label>
+                                    </Frame>
+                                </StackLayout>
+                                
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+
+
+                  
+
+
+                    <StackLayout >
+                        <Frame  HeightRequest="150" HasShadow="False" >
+                            <StackLayout Spacing="50" Margin="11.5">
+                                <Button Text="Biometrik Giriş" FontFamily="Oswald" BackgroundColor="#ff3e96"
+                                                FontSize="17" FontAttributes="Bold" CornerRadius="10"
+                                                TextColor="White" x:Name="bioGiris" Clicked="bioGiris_Clicked"></Button>
+                                 
+                                <Label  Text="Collections Web Sayfası" FontFamily="Bilbo-Swash-Caps" FontSize="30"
+                                   TextColor="#ff69b4" FontAttributes="Bold" VerticalTextAlignment="Center"
+                                   HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                            </StackLayout>
+                           
+                        </Frame>
+                    </StackLayout>
+                
+                    <StackLayout >
+                        <Frame HasShadow="False" BorderColor="#e8e8e8"  >
+                            <Grid HorizontalOptions="Center" >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                 
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label  FontFamily="Bilbo-Swash-Caps" Text="Hesabın yok mu? " HorizontalTextAlignment="Center"
+                                    VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="25"
+                                    TextColor="#1c1c1c"  Grid.Column="0" Grid.Row="0"></Label>
+                                
+                                <Label  FontFamily="Oswald" Text="Kaydol" HorizontalTextAlignment="Center"
+                                    VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="15"
+                                    TextColor="#ff3e96"  Grid.Column="1" Grid.Row="0" >
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped">
+
+                                        </TapGestureRecognizer>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Grid>
+                                
+                        </Frame>
+                    </StackLayout>
+                
+            </StackLayout>
+        </ScrollView>
+        </Grid>
+    </StackLayout>
+    
+</ContentPage>

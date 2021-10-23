@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="Asama1.KayıtVgiris.Kayıt1">
+    <StackLayout BackgroundColor="White">
+        <Grid>
+            <ScrollView>
+                <StackLayout>
+
+
+                    <StackLayout>
+                        <yummy:PancakeView BackgroundGradientStartPoint="0,0" BackgroundGradientEndPoint="0,1" 
+                                           Padding="24" HeightRequest="75" CornerRadius="0" Opacity="0.9">
+                            <yummy:PancakeView.BackgroundGradientStops>
+                                <yummy:GradientStopCollection>
+                                    <yummy:GradientStop Color="#ff69b4" Offset="0.01" />
+                                    <yummy:GradientStop Color="#ff3e96" Offset="0.25" />
+                                    <yummy:GradientStop Color="#ee3a8c" Offset="0.5" />
+                                    <yummy:GradientStop Color="#836fff" Offset="1" />
+                                </yummy:GradientStopCollection>
+  
+                            </yummy:PancakeView.BackgroundGradientStops>
+                            <StackLayout>
+
+                                <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                                    <Label Text="MoonBow" FontFamily="Bilbo-Swash-Caps" FontSize="50"
+                                   TextColor="White" FontAttributes="Bold" VerticalTextAlignment="Center"
+                                   HorizontalTextAlignment="Center"></Label>
+                                </StackLayout>
+                            </StackLayout>
+                        </yummy:PancakeView>
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Frame  HeightRequest="77" HasShadow="False" >
+                            <Label Text="Bilgilerini ve dosyalarını güvende tutmak için kaydol!" TextColor="#1c1c1c"
+                                   VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontAttributes="Bold"
+                                   FontSize="30" FontFamily="Bilbo-Swash-Caps" />
+                        </Frame>
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Frame HeightRequest="340"  HasShadow="False">
+
+                            <StackLayout >
+                                <Frame BackgroundColor="#fafafa" BorderColor="#e8e8e8" HeightRequest="35" CornerRadius="15" HasShadow="True">
+                                    <Entry Placeholder="E-posta" PlaceholderColor="#d4d4d6" VerticalTextAlignment="Center"
+                                           FontSize="13" FontAttributes="Bold" TextColor="#1c1c1c"
+                                           x:Name="posta"></Entry>
+                                </Frame>
+
+                                <Frame BackgroundColor="#fafafa" BorderColor="#e8e8e8"  HeightRequest="35" CornerRadius="15" HasShadow="True">
+                                    <Entry Placeholder="Adı Soyadı" PlaceholderColor="#d4d4d6" VerticalTextAlignment="Center"
+                                           FontSize="13" FontAttributes="Bold" TextColor="#1c1c1c"
+                                           x:Name="adSoyad"></Entry>
+                                </Frame>
+
+                                <Frame BackgroundColor="#fafafa" BorderColor="#e8e8e8"   HeightRequest="35" CornerRadius="15" HasShadow="True">
+                                    <Entry Placeholder="Kullanıcı adı" PlaceholderColor="#d4d4d6" VerticalTextAlignment="Center"
+                                           FontSize="13" FontAttributes="Bold" TextColor="#1c1c1c"
+                                           x:Name="kullancıcıAdı"></Entry>
+                                </Frame>
+
+                                <Frame BackgroundColor="#fafafa" BorderColor="#e8e8e8"   HeightRequest="35" CornerRadius="15" HasShadow="True">
+                                    <Entry Placeholder="Şifre" PlaceholderColor="#d4d4d6" VerticalTextAlignment="Center"
+                                           FontSize="13" FontAttributes="Bold" TextColor="#1c1c1c" IsPassword="True"
+                                           x:Name="sifre"></Entry>
+                                </Frame>
+
+                            </StackLayout>
+
+                        </Frame>
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Button Text="Kaydol" CornerRadius="15" BorderWidth="4" TranslationY="-30"
+                                    BackgroundColor="#ff3e96" TextColor="White" FontFamily="Oswald" FontAttributes="Bold"
+                                    FontSize="17" Margin="30" x:Name="kayıt" Clicked="kayıt_Clicked"></Button>
+                    </StackLayout>
+                    <StackLayout>
+                        <Frame  HeightRequest="50" HasShadow="False" TranslationY="-40" >
+                            <Label  Text="MoonBow collection" FontFamily="Bilbo-Swash-Caps" FontSize="40"
+                                   TextColor="#ff69b4" FontAttributes="Bold" VerticalTextAlignment="Center"
+                                   HorizontalTextAlignment="Center" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+                        </Frame>
+                    </StackLayout>
+
+                   
+
+
+                </StackLayout>
+            </ScrollView>
+           
+        </Grid>
+    </StackLayout>
+</ContentPage>
