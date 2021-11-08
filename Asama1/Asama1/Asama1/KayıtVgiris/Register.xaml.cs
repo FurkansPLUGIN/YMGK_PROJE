@@ -68,7 +68,7 @@ namespace Asama1.KayıtVgiris
                         SmtpServer.Host = "smtp.gmail.com";
                         SmtpServer.EnableSsl = true;
                         SmtpServer.UseDefaultCredentials = false;
-                        SmtpServer.Credentials = new System.Net.NetworkCredential("furkan.demirel.056@gmail.com", "01.Furkan.23");
+                        SmtpServer.Credentials = new System.Net.NetworkCredential("furkan.demirel.056@gmail.com", "******");
 
                         SmtpServer.Send(maila);
                       
