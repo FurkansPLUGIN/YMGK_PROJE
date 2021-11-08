@@ -73,7 +73,7 @@ namespace Asama1.KayıtVgiris
                         SmtpServer.Host = "smtp.gmail.com";
                         SmtpServer.EnableSsl = true;
                         SmtpServer.UseDefaultCredentials = false;
-                        SmtpServer.Credentials = new System.Net.NetworkCredential("fth.bilgi.iletisim@gmail.com", "BilgiFTH23");
+                        SmtpServer.Credentials = new System.Net.NetworkCredential("fth.bilgi.iletisim@gmail.com", "*****");
 
                         SmtpServer.Send(maila);
                         await DisplayAlert("Uyarı", "Doğrulama Kodunuz gönderilmiştir", "Tamam");
