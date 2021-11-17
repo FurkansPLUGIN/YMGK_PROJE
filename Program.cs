@@ -15,11 +15,20 @@ namespace ChidamberAndKemerer
 
         static string alfabe = "abcdefghijklmnoprstuvyzxwq ";
        
+        //public static string Kaydir(string kaydirMetin)
+        //{
+        //    return kaydirMetin.Substring(1, kaydirMetin.Length - 1) + kaydirMetin.Substring(0, 1); 
+        //}
+        public static string Kaydir( string metin, int say)
+        {
+            return metin.Remove(0, say) + metin.Substring(0, say);
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Bir metin girin");
-            string metin_raw = Console.ReadLine();
-            string metin = metin_raw.Replace(" ", "");
+            string metin = Console.ReadLine();
+           
             Console.WriteLine(metin);
 
             int metinUzunluk = metin.Length;
@@ -132,11 +141,21 @@ namespace ChidamberAndKemerer
 
 
             string[] ekle = new string[metin.Length];
+            string kaydirmak_icin = "";
             for (int i = 0; i < metin.Length; i++)
             {
                 ekle[i] = char.ConvertFromUtf32(hash2[i] + integer_birlesir);
+                kaydirmak_icin += ekle[i];
                 Console.Write(ekle[i]);
             }
+            Console.WriteLine(" ");
+
+
+            string sifreliMetin = Kaydir(kaydirmak_icin, metin.Length / 2);
+            Console.WriteLine("Şifreli Metin: "+sifreliMetin);
+
+
+
 
 
 
