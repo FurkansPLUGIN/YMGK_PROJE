@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Collatz Problemi 
+            Console.WriteLine("Birden büyük pozitif tam sayı girin");
+            int sayi = Convert.ToInt32(Console.ReadLine());
+            char [] dizi = new char[100];
+            if (sayi < 1)
+            {
+                Console.WriteLine("Hatalı giriş");
+            }
+            else
+            {
+                int i = 0;
+                while (sayi != 1)
+                {
+                    if (sayi % 2 == 0)
+                    {
+                        sayi = sayi / 2;
+                        
+                    }
+                    else if (sayi % 2 != 0)
+                    {
+                        sayi = (sayi * 3) + 1;
+                    }
+                    
+                    else
+                    {
+                        break;
+                    }
+                    dizi[i] = Convert.ToChar(sayi);
+                    i++;
+                    Console.WriteLine(sayi);              
+                }
+            }
+            Console.WriteLine(" ");
+            for (int i = 0; i < dizi.Length; i++)
+            {
+                Console.Write(dizi[i] + " ");
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
